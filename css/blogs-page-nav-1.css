@@ -1,0 +1,15 @@
+.page-1 a {
+    color: var(--blue);
+}
+
+.page-2 a {
+    color: var(--solid-black);
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 625px) {
+    .page-1-mobile a {
+        color: var(--blue);
+        text-decoration: underline;
+    }
+}

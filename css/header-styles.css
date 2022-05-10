@@ -1,3 +1,65 @@
 header {
     background-color: var(--green);
+    position: sticky;
+    top: 0;
+    margin-bottom: 15px;
+}
+
+nav {
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+ul {
+    list-style: none;
+    font-family: "Jost";
+    font-size: 25px;
+    font-display: swap;
+    white-space: nowrap;
+    margin: auto;
+}
+
+li a {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 4px;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+.blog-logo {
+    width: 250px;
+    margin-left: 20px;
+}
+
+.hamburger-button {
+    display: none;
+}
+
+@media only screen and (max-width: 700px) {
+    li a {
+        margin: 0px;
+    }
+}
+
+@media only screen and (max-width: 625px) {
+    ul {
+        display: none;
+    }
+    .blog-logo {
+        height: 32px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .hamburger-button {
+        display: block;
+        height: 27px;
+        margin-left: 20px;
+    }
 }
