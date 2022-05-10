@@ -38,3 +38,9 @@ p {
         height: 300px;
     }
 }
+
+@media only screen and (max-width: 470px) {
+    .size-full img {
+        height: 250px;
+    }
+}
