@@ -2,11 +2,20 @@ const pageUrl = "https://www.tanix.one/wp-json/wp/v2/pages/109";
 
 const pageContainer = document.querySelector(".page-content");
 
-async function fetchPageHtml() {
-    const response = await fetch(pageUrl);
-    const json = await response.json();
+const errorMessage = document.querySelector(".error-message");
 
-    pageContainer.innerHTML = `${json.content.rendered}`;    
+async function fetchPageHtml() {
+    try{
+        const response = await fetch(pageUrl);
+        const json = await response.json();
+
+        errorMessage.innerHTML = "";
+
+        pageContainer.innerHTML = `${json.content.rendered}`;
+    }
+    catch(error) {
+        errorMessage.innerHTML = `<p>An error has occurred!</p>`;
+    }
 }
 
 fetchPageHtml();

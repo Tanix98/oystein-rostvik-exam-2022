@@ -9,19 +9,33 @@ const blogList = document.querySelector(".blog-list");
 const errorMessage = document.querySelector(".error-message");
 
 async function fetchPageTitle() {
-    const response = await fetch(apiPageUrl);
-    const json = await response.json();
+    try{
+        const response = await fetch(apiPageUrl);
+        const json = await response.json();
 
-    titleContainer.innerHTML = `<h1>${json.title.rendered}</h1>`;    
+        errorMessage.innerHTML = "";
+
+        titleContainer.innerHTML = `<h1>${json.title.rendered}</h1>`;
+    }
+    catch(error) {
+        errorMessage.innerHTML = `<p>An error has occurred!</p>`;
+    }
 }
 
 async function fetchBlogList() {
-    const response = await fetch(apiPostsList);
+    try{
+        const response = await fetch(apiPostsList);
 
-    const json = await response.json();
+        const json = await response.json();
 
-    for(let i = 0; i < apiPostsList.length; i++) {
-        blogList.innerHTML += `<div class="blog-post"><a href="blogpage.html?id=${json[i].id}"><img src="${json[i].featured_media_src_url}" class="blog-post-thumbnail"> <h2 class="blog-title">${json[i].title.rendered}</h2> <p class="blog-date">${json[i].date}<p/></a></div>`;
+        errorMessage.innerHTML = "";
+
+        for(let i = 0; i < json.length; i++) {
+            blogList.innerHTML += `<div class="blog-post"><a href="blogpage.html?id=${json[i].id}"><img src="${json[i].featured_media_src_url}" class="blog-post-thumbnail"> <h2 class="blog-title">${json[i].title.rendered}</h2> <p class="blog-date">${json[i].date}<p/></a></div>`;
+        }
+    }
+    catch(error) {
+        errorMessage.innerHTML = `<p>An error has occurred!</p>`;
     }
 }
 

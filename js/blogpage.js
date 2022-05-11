@@ -22,7 +22,7 @@ async function fetchBlogList() {
         blogPost.innerHTML = `${json.content.rendered}`;    
     }
     catch(error) {
-        errorMessage.innerHTML = `<div class="error-message"><p>An error has occurred!</p>`;
+        errorMessage.innerHTML = `<p>An error has occurred!</p>`;
     }
 }
 
