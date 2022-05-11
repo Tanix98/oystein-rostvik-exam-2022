@@ -20,17 +20,24 @@ main {
     text-align: center;
     font-family: "jost";
     max-width: 300px;
-    height: 320px;
+    height: 335px;
     margin: auto;
+    background-color: var(--white);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    border-radius: 40px;
+    margin-bottom: 20px;
 }
 
 .blog-post a {
     text-decoration: none;
-    color: var(--solid-black);
+    color: var(--black);
+    display: block;
+    height: 100%;
 }
 
 .blog-post-thumbnail {
-    border-radius: 40px;
+    border-top-right-radius: 40px;
+    border-top-left-radius: 40px;
     width: 300px;
 }
 
@@ -92,8 +99,7 @@ main {
         width: 700px;
     }
     .blog-post {
-        margin-bottom: 100px;
-        height: 235px;
+        height: 330px;
     }
 }
 

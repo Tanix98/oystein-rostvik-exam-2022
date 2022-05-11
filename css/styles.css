@@ -42,3 +42,9 @@ p {
 .page-content {
     max-width: 800px;
 }
+
+.error-message {
+    color: var(--red);
+    margin-top: 20px;
+    font-size: 20px;
+}
