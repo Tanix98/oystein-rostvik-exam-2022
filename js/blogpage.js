@@ -13,13 +13,13 @@ const blogPost = document.querySelector(".blog");
 async function fetchBlogList() {
     try{
         const response = await fetch(postUrl);
-        const json = await response.json();
+        const data = await response.json();
 
         errorMessage.innerHTML = "";
 
-        console.log(json);
+        console.log(data);
 
-        blogPost.innerHTML = `${json.content.rendered}`;    
+        blogPost.innerHTML = `${data.content.rendered}`;    
     }
     catch(error) {
         errorMessage.innerHTML = `<p>An error has occurred!</p>`;

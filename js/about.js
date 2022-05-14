@@ -7,11 +7,11 @@ const errorMessage = document.querySelector(".error-message");
 async function fetchPageHtml() {
     try{
         const response = await fetch(pageUrl);
-        const json = await response.json();
+        const data = await response.json();
 
         errorMessage.innerHTML = "";
 
-        pageContainer.innerHTML = `${json.content.rendered}`;
+        pageContainer.innerHTML = `${data.content.rendered}`;
     }
     catch(error) {
         errorMessage.innerHTML = `<p>An error has occurred!</p>`;

@@ -59,8 +59,6 @@ function checkLength(value, len) {
         else{
             return false;
         }
-
-        pageErrorMessage.innerHTML = "";
     }
     catch(error) {
         errorMessage.innerHTML = `<p>An error has occurred!</p>`;
@@ -72,8 +70,6 @@ function validateEmail(email) {
         const regEx = /\S+@\S+\.\S+/;
         const patternMatches = regEx.test(email);
         return patternMatches;
-
-        pageErrorMessage.innerHTML = "";
     }
     catch(error) {
         errorMessage.innerHTML = `<p>An error has occurred!</p>`;
