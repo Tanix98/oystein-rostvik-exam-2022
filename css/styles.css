@@ -8,12 +8,21 @@
     --green: #2FD426;
     --blue: #1EA6A0;
     --blue-hover: #20c2ba;
+    --blue-click: #24d6cd;
     --red: #D4262F;
     --black: #2B2B2B;
     --background-color: #F8F8F8;
     --solid-black: #000000;
     --white: #ffff;
 }
+
+::-moz-selection {
+    background: var(--blue-hover);
+  }
+
+::selection {
+    background: var(--blue-hover);
+  }
 
 body {
     overflow-x: hidden;

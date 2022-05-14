@@ -74,6 +74,10 @@
     background-color: var(--blue-hover);
 }
 
+#submit-button:active {
+    background-color: var(--blue-click);
+}
+
 @media only screen and (max-width: 650px) {
     .page-content, .contact-forms {
         width: 92vw;
