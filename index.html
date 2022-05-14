@@ -33,7 +33,21 @@
     <main>
         <div class="error-message"></div>
         <div class="page-content"></div>
-        <div class="carousel"></div>
+        <div class="carousel">
+            <h2 id="carousel-title">Latest posts</h2>
+            <div class="carousel-main">
+                <button id="previous-slide-arrow" class="slide-arrows"><img src="resources/icons/black-left-arrow-carousel.svg" alt="Previous slide button"></button>
+                <div class="slides">
+                    <div id="slide-1"></div>
+                    <div id="slide-2" class="invisible-slide"></div>
+                </div>
+                <button id="next-slide-arrow" class="slide-arrows"><img src="resources/icons/black-right-arrow-carousel.svg" alt="Next slide button"></button>
+            </div>
+            <div class="carousel-dots">
+                <button id="slide-1-button" class="active"></button>
+                <button id="slide-2-button"></button>
+            </div>
+        </div>
     </main>
     <footer>
         <div class="copyright">© Copyright 2022 Øystein Røstvik</div>    
