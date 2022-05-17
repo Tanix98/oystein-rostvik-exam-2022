@@ -1,3 +1,9 @@
 #nav-about {
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
 }
+
+@media (prefers-color-scheme: dark) {
+    .page-content {
+        color: red;
+    }
+}
