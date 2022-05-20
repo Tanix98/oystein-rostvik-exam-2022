@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Blog Posts list page 2">
+    <meta name="description" content="Contact Page For The Nature & Food Blog">
     <meta name="color-scheme" content="light only">
-    <title>Blogs</title>
+    <title>Contact</title>
     <link rel="icon" href="/resources/logo/favicon.svg">
-    <link rel="stylesheet" href="/css/blogs-styles.css">
-    <link rel="stylesheet" href="/css/blogs-page-nav-2.css">
+    <link rel="stylesheet" href="/css/image-modal-test.css">
     <link rel="stylesheet" href="/css/header-styles.css">
     <link rel="stylesheet" href="/css/footer-styles.css">
     <link rel="stylesheet" href="/css/styles.css">
@@ -44,33 +43,22 @@
         </div>
     </header>
     <main>
-        <div class="error-message"></div>
-        <div class="page-title"></div>
-        <div class="blog-list">
+        <!-- Trigger the Modal -->
+        <img id="myImg" src="/resources/icons/hamburger-menu-button.svg" alt="Hamburger" style="width:100%;max-width:300px">
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <!-- The Close Button -->
+            <span class="close">&times;</span>
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content" id="img01">
+            <!-- Modal Caption (Image Text) -->
+            <div id="caption"></div>
         </div>
-        <div class="page-nav">
-            <p class="page-text">Page</p>
-            <div class="page-nav-main">
-                <a href="blogs-page-1.html" class="page-1-arrow"><img src="/resources/icons/black-left-arrow-blog-pages.svg" alt="Page navigation left arrow"></a>
-                <div class="page-1"><a href="blogs-page-1.html">1</a></div>
-                <div class="page-2"><a href="blogs-page-2.html">2</a></div>
-                <a href="blogs-page-2.html" class="page-2-arrow"><img src="/resources/icons/black-right-arrow-blog-pages.svg" alt="Page navigation right arrow"></a>    
-            </div>
-        </div>
-        <div class="page-nav-mobile">
-            <div class="page-nav-main-mobile">
-                <a href="blogs-page-1.html" class="page-1-arrow-mobile"><img src="/resources/icons/white-right-arrow-blog-pages.svg" alt="Page navigation left arrow"></a>
-                <div class="page-1-mobile"><a href="blogs-page-1.html">1</a></div>
-                <div class="page-2-mobile"><a href="blogs-page-2.html">2</a></div>
-                <a href="blogs-page-2.html" class="page-2-arrow-mobile"><img src="/resources/icons/white-left-arrow-blog-pages.svg" alt="Page navigation right arrow"></a>    
-            </div>
-        </div>
-        <div class="page-nav-mobile-space">space</div>
     </main>
     <footer>
         <div class="copyright">© Copyright 2022 Øystein Røstvik</div>    
     </footer>
     <script src="/js/header.js"></script>
-    <script src="/js/blogs-page-2.js"></script>
+    <script src="/js/image-modal-test.js"></script>
 </body>
 </html>
