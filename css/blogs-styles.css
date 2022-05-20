@@ -150,8 +150,8 @@ main {
         text-decoration: none;
     }
 
-    .page-nav-main-mobile img {
-        width: 25px;
+    .page-nav-main-mobile img, .page-1-arrow-mobile, .page-2-arrow-mobile {
+        height: 30px;
     }
 
     .page-1-arrow-mobile {
