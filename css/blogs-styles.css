@@ -4,6 +4,7 @@
 
 #mobile-nav-blogs {
     color: var(--blue);
+    text-decoration: underline;
 }
 
 main {

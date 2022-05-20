@@ -4,4 +4,5 @@
 
 #mobile-nav-about {
     color: var(--blue);
+    text-decoration: underline;
 }

@@ -4,6 +4,7 @@
 
 #mobile-nav-contact {
     color: var(--blue);
+    text-decoration: underline;
 }
 
 .page-content, .contact-forms {
@@ -83,6 +84,10 @@
 }
 
 @media only screen and (max-width: 650px) {
+    .page-content br {
+        display: block;
+        height: 20px;
+    }
     .page-content, .contact-forms {
         width: 92vw;
     }
