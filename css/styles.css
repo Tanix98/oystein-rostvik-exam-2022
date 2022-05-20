@@ -34,7 +34,6 @@ main {
     display: flex;
     justify-content: center;
     min-height: 100vh;
-    padding: 10px !important;
 }
 
 h1 {
@@ -49,8 +48,9 @@ p {
     font-size: 18px;
 }
 
-.page-content {
+.page-content, .blog {
     max-width: 800px;
+    padding: 10px !important;
 }
 
 .error-message {
