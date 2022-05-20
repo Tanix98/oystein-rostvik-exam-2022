@@ -10,6 +10,8 @@ const errorMessage = document.querySelector(".error-message");
 
 const blogPost = document.querySelector(".blog");
 
+const mainImage = document.querySelector(".main-image");
+
 async function fetchBlogList() {
     try{
         const response = await fetch(postUrl);
@@ -19,7 +21,9 @@ async function fetchBlogList() {
 
         console.log(data);
 
-        blogPost.innerHTML = `${data.content.rendered}`;    
+        mainImage.innerHTML = `<img src=${data.featured_media_src_url}>`;  
+
+        blogPost.innerHTML += `${data.content.rendered}`;    
     }
     catch(error) {
         errorMessage.innerHTML = `<p>An error has occurred!</p>`;

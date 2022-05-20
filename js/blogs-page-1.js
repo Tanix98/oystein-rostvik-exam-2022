@@ -39,6 +39,6 @@ async function fetchBlogList() {
     }
 }
 
-fetchPageTitle()
+fetchPageTitle();
 
 fetchBlogList();
