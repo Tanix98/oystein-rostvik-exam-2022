@@ -1,14 +1,19 @@
-const modal = document.querySelector(".modal");
+const blogpostImage = document.querySelector(".blogpost-image");
+const imageModal = document.querySelector(".image-modal");
+const imageModalImg = document.querySelector(".image-modal-img");
+const modalBackground = document.querySelector(".modal-background");
 
-const image = document.querySelector(".main-image");
+async function openModal() {
+    imageModal.style.display = "flex";
+    const response = await fetch(postUrl);
+    const data = await response.json();
+    imageModalImg.src = `${data._embedded['wp:featuredmedia']['0'].source_url}`;
+}
 
-const modalImage = document.querySelector(".modal-image");
-
-image.onclick = function(){
-    modal.style.display = "block";
-    modalImage.src = this.src;
-    console.log("hiii");
+blogpostImage.onclick = function() {
+    openModal();
 };
 
-const modalExit = document.querySelector(".close-modal")[0];
-
+modalBackground.addEventListener("click", function(){
+    imageModal.style.display = "none";
+});

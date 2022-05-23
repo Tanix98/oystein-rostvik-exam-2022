@@ -10,7 +10,7 @@ const errorMessage = document.querySelector(".error-message");
 
 const blogPost = document.querySelector(".blog");
 
-const mainImage = document.querySelector(".main-image");
+const blogPostImage = document.querySelector(".blogpost-image");
 
 async function fetchBlogList() {
     try{
@@ -21,7 +21,7 @@ async function fetchBlogList() {
 
         console.log(data);
 
-        mainImage.innerHTML = `<img src=${data.featured_media_src_url}>`;  
+        blogPostImage.src = `${data._embedded['wp:featuredmedia']['0'].source_url}`;
 
         blogPost.innerHTML += `${data.content.rendered}`;    
     }

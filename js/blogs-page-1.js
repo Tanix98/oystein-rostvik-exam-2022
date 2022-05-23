@@ -1,4 +1,4 @@
-const apiPostsList = "https://www.tanix.one/wp-json/wp/v2/posts?page=1";
+const apiPostsList = "https://www.tanix.one/wp-json/wp/v2/posts?_embed?page=1";
 
 const apiPageUrl = "https://www.tanix.one/wp-json/wp/v2/pages/106";
 
