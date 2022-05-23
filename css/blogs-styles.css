@@ -23,7 +23,7 @@ main {
 
 .blog-post {
     text-align: center;
-    font-family: "jost";
+    font-family: "Jost", Arial, Helvetica;
     max-width: 300px;
     height: 335px;
     margin: auto;
@@ -62,11 +62,10 @@ main {
     margin: auto;
     text-align: center;
     margin-top: 20px;
-    margin-bottom: 0;
 }
 
 .page-nav-main {
-    font-family: "Jost";
+    font-family: "Jost", Arial, Helvetica;
     display: flex;
     gap: 10px;
 }
@@ -77,6 +76,7 @@ main {
 
 .page-nav a {
     font-size: 20px;
+    margin-bottom: 10px;
 }
 
 .page-nav img {
@@ -141,7 +141,7 @@ main {
     }
 
     .page-1-mobile, .page-2-mobile {
-        font-family: "Jost";
+        font-family: "Jost", Arial, Helvetica;
         font-size: 40px;
     }
 

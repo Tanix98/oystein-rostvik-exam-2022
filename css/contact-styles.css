@@ -26,7 +26,7 @@
 }
 
 .contact-forms input, textarea {
-    font-family: "Jost";
+    font-family: "Jost", Arial, Helvetica;
     font-size: 18px;
     width: 100%;
     border: 1.5px solid var(--solid-black);

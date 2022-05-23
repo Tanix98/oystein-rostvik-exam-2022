@@ -37,14 +37,14 @@ main {
 }
 
 h1 {
-    font-family: "Bebas Neue";
+    font-family: "Bebas Neue", Impact, Verdana;
     text-align: center;
     font-size: 40px;
     margin-bottom: 15px;
 }
 
 p {
-    font-family: "Jost";
+    font-family: "Jost", Arial, Helvetica;
     font-size: 18px;
 }
 

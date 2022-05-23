@@ -17,7 +17,7 @@ nav a {
 
 .header-ul {
     list-style: none;
-    font-family: "Jost";
+    font-family: "Jost", Arial, Helvetica;
     font-size: 25px;
     font-display: swap;
     white-space: nowrap;
@@ -88,7 +88,7 @@ nav a {
     .mobile-header-li a {
         text-decoration: none;
         color: var(--white);
-        font-family: "Jost";
+        font-family: "Jost", Arial, Helvetica;
         font-size: 30px;
     }
 
