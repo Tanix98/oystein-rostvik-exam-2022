@@ -25,9 +25,11 @@
     margin-bottom: 20px;
 }
 
-.contact-forms input, textarea {
-    font-family: "Jost", Arial, Helvetica;
+.contact-forms input, textarea, #submit-button {
     font-size: 18px;
+}
+
+.contact-forms input, textarea {
     width: 100%;
     border: 1.5px solid var(--solid-black);
     border-radius: 5px;
@@ -67,7 +69,6 @@
     margin-top: 20px;
     width: 125px;
     height: 38px;
-    font-size: 18px;
     cursor: pointer;
     text-transform: uppercase;
     border: none;

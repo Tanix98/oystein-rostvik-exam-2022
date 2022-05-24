@@ -8,19 +8,15 @@ main {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin: auto;
-    width: 90vw;
 }
 
 .blog img {
     display: none;
 }
 
-.blogpost-image-container {
+.blog, .blogpost-image-container {
     width: 90vw;
-    max-width: 800px;
     margin: auto;
-    padding: 10px;
 }
 
 .blogpost-image {
@@ -37,7 +33,6 @@ h1 {
 }
 
 .wp-block-post-date {
-    font-family: "Jost", Arial, Helvetica;
     text-align: center;
     font-size: 22px;
     margin-bottom: 20px;

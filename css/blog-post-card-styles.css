@@ -1,0 +1,35 @@
+.blog-post, .blog-post-thumbnail {
+    max-width: 300px;
+}
+
+.blog-post {
+    text-align: center;
+    height: 335px;
+    margin: auto;
+    background-color: var(--white);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    border-radius: 40px;
+    margin-bottom: 20px;
+}
+
+.blog-post a {
+    text-decoration: none;
+    color: var(--black);
+    display: block;
+    height: 100%;
+}
+
+.blog-post-thumbnail {
+    border-top-right-radius: 40px;
+    border-top-left-radius: 40px;
+}
+
+.blog-title {
+    text-decoration: underline;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.blog-date {
+    font-size: 16px;
+}

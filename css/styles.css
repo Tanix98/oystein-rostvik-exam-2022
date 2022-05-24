@@ -26,13 +26,10 @@
   }
 
 body {
-    overflow-x: hidden;
     background-color: var(--background-color);
 }
 
 main {
-    display: flex;
-    justify-content: center;
     min-height: 100vh;
 }
 
@@ -44,11 +41,14 @@ h1 {
 }
 
 p {
-    font-family: "Jost", Arial, Helvetica;
     font-size: 18px;
 }
 
-.page-content, .blog {
+p, .wp-block-post-date, .blog-post, .page-nav-main, .page-1-mobile, .page-2-mobile, .contact-forms input, textarea, .copyright, .header-ul, .mobile-header-li a, #carousel-title {
+    font-family: "Jost", Arial, Helvetica;
+}
+
+.page-content, .blog, .blogpost-image-container {
     max-width: 800px;
     padding: 10px !important;
 }

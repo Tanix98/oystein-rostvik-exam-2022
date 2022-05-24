@@ -17,8 +17,9 @@ main {
     margin-bottom: 40px;
 }
 
+/* Carousel */
+
 #carousel-title {
-    font-family: "Jost", Arial, Helvetica;
     font-size: 24px;
     text-align: center;
     margin-bottom: 10px;
@@ -29,7 +30,6 @@ main {
     flex-direction: column;
     margin: auto;
     margin-bottom: 20px;
-    /*max-width: 800px;*/
 }
 
 .carousel-main {
@@ -70,41 +70,6 @@ main {
     display: none !important;
 }
 
-.blog-post {
-    text-align: center;
-    font-family: "Jost", Arial, Helvetica;
-    max-width: 300px;
-    height: 335px;
-    margin: auto;
-    background-color: var(--white);
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
-    border-radius: 40px;
-    margin-bottom: 20px;
-}
-
-.blog-post a {
-    text-decoration: none;
-    color: var(--black);
-    display: block;
-    height: 100%;
-}
-
-.blog-post-thumbnail {
-    border-top-right-radius: 40px;
-    border-top-left-radius: 40px;
-    width: 300px;
-}
-
-.blog-title {
-    text-decoration: underline;
-    font-size: 25px;
-    font-weight: 400;
-}
-
-.blog-date {
-    font-size: 16px;
-}
-
 .carousel-dots {
     margin: auto;
 }
@@ -123,21 +88,19 @@ main {
 }
 
 @media only screen and (max-width: 1600px) {
+    .blog-post, .blog-post-thumbnail {
+        max-width: 250px !important;
+    }
+
     .blog-post {
-        max-width: 250px;
-        height: 295px;
-        border-radius: 35px;
-        margin-bottom: 15px;
+        height: 295px !important;
+        border-radius: 35px !important;
+        margin-bottom: 15px !important;
     }
     
     .blog-post-thumbnail {
-        border-top-right-radius: 35px;
-        border-top-left-radius: 35px;
-        width: 250px;
-    }
-    
-    .blog-title {
-        font-size: 24px;
+        border-top-right-radius: 35px !important;
+        border-top-left-radius: 35px !important;
     }
 }
 
@@ -171,24 +134,26 @@ main {
         gap: 3.7vw;
     }
 
+    .blog-post, .blog-post-thumbnail {
+        max-width: 45vw !important;
+    }
+
     .blog-post {
-        max-width: 45vw;
-        height: 53vw;
-        border-radius: 6vw;
-        margin-bottom: 20px;
+        height: 53vw !important;
+        border-radius: 6vw !important;
+        margin-bottom: 20px !important;
     }
     
     .blog-post-thumbnail {
-        border-top-right-radius: 6vw;
-        border-top-left-radius: 6vw;
-        max-width: 45vw;
+        border-top-right-radius: 6vw !important;
+        border-top-left-radius: 6vw !important;
     }
     
     .blog-title {
-        font-size: 4.3vw;
+        font-size: 4.3vw !important;
     }
     
     .blog-date {
-        font-size: 2.9vw;
+        font-size: 2.9vw !important;
     }
 }
