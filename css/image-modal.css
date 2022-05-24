@@ -33,7 +33,7 @@
     font-size: 50px;
     font-weight: bolder;
     color: var(--white);
-    pointer-events: none;
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 625px) {

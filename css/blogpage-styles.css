@@ -9,12 +9,7 @@ main {
     justify-content: center;
     flex-direction: column;
     margin: auto;
-    max-width: 800px;
-}
-
-.blog p, .blog h1, .wp-block-post-date {
-    width: 100%;
-    object-fit: cover;
+    width: 90vw;
 }
 
 .blog img {
@@ -22,14 +17,16 @@ main {
 }
 
 .blogpost-image-container {
+    width: 90vw;
     max-width: 800px;
     margin: auto;
+    padding: 10px;
 }
 
 .blogpost-image {
     object-fit: cover;
     width: 100%;
-    height: 500px;
+    height: 460px;
     border-radius: 40px;
     margin: auto;
     cursor: pointer;
@@ -52,13 +49,13 @@ p {
 
 @media only screen and (max-width: 836px) {
     .blogpost-image {
-        height: 60vw;
+        height: 55vw;
     }
 }
 
 @media only screen and (max-width: 625px) {
     .blogpost-image {
-        height: 375px;
+        height: 345px;
     }
 }
 
