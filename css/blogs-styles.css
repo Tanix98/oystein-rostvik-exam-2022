@@ -13,6 +13,10 @@ main {
     padding: 0px !important;
 }
 
+.page-title {
+    padding-top: 10px;
+}
+
 .blog-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
