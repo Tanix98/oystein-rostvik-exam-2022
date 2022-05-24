@@ -2,6 +2,7 @@ const blogpostImage = document.querySelector(".blogpost-image");
 const imageModal = document.querySelector(".image-modal");
 const imageModalImg = document.querySelector(".image-modal-img");
 const modalBackground = document.querySelector(".modal-background");
+const modalX = document.querySelector(".modal-x");
 
 async function openModal() {
     imageModal.style.display = "flex";
@@ -16,4 +17,20 @@ blogpostImage.onclick = function() {
 
 modalBackground.addEventListener("click", function(){
     imageModal.style.display = "none";
+});
+
+modalX.addEventListener("click", function(){
+    imageModal.style.display = "none";
+});
+
+blogpostImage.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        document.querySelector(".blogpost-image").click()
+    }
+});
+
+modalX.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        document.querySelector(".modal-x").click();
+    }
 });
