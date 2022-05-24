@@ -1,6 +1,10 @@
-const apiPostsList = "https://www.tanix.one/wp-json/wp/v2/posts?_embed?page=1";
+const apiPostsList = "https://www.tanix.one/wp-json/wp/v2/posts?page=1";
 
 const apiPageUrl = "https://www.tanix.one/wp-json/wp/v2/pages/106";
+
+const apiAltText = "https://www.tanix.one/wp-json/wp/v2/posts?_fields=link,title,featured_media,_links,_embedded&_embed";
+
+const blogPostThumbnail = document.querySelector(".blog-post-thumbnail");
 
 const titleContainer = document.querySelector(".page-title");
 
@@ -18,6 +22,7 @@ async function fetchPageTitle() {
         titleContainer.innerHTML = `<h1>${data.title.rendered}</h1>`;
         }
     catch(error) {
+        console.log(error)
         errorMessage.innerHTML = `<p>An error has occurred!</p>`;
     }
 }
@@ -25,16 +30,33 @@ async function fetchPageTitle() {
 async function fetchBlogList() {
     try{
         const response = await fetch(apiPostsList);
-
         const data = await response.json();
 
         errorMessage.innerHTML = "";
 
         for(let i = 0; i < data.length; i++) {
-            blogList.innerHTML += `<div class="blog-post"><a href="blogpage.html?id=${data[i].id}"><img src="${data[i].featured_media_src_url}" class="blog-post-thumbnail"> <h2 class="blog-title">${data[i].title.rendered}</h2> <p class="blog-date">${data[i].date}<p/></a></div>`;
+            blogList.innerHTML += `<div class="blog-post"><a href="blogpage.html?id=${data[i].id}" aria-label="Blog post: ${data[i].title.rendered}"><img src="${data[i].featured_media_src_url}" class="blog-post-thumbnail" alt="Blog post thumbnail: ${data[i].title.rendered}"> <h2 class="blog-title">${data[i].title.rendered}</h2> <p class="blog-date">${data[i].date}<p/></a></div>`;
         }
     }
     catch(error) {
+        console.log(error)
+        errorMessage.innerHTML = `<p>An error has occurred!</p>`;
+    }
+}
+
+async function fetchBlogListThumbnails() {
+    try{
+        const response = await fetch(apiAltText);
+        const data = await response.json();
+
+        errorMessage.innerHTML = "";
+
+        for(let i = 0; i < data.length; i++) {
+            blogPostThumbnail.innerHTML = `<img src="${data[i].media_details.sizes.thumbnail.source_url}" class="blog-post-thumbnail" alt="${data[i].alt_text}">`;
+        }
+    }
+    catch(error) {
+        console.log(error)
         errorMessage.innerHTML = `<p>An error has occurred!</p>`;
     }
 }
@@ -42,3 +64,5 @@ async function fetchBlogList() {
 fetchPageTitle();
 
 fetchBlogList();
+
+fetchBlogListThumbnails();

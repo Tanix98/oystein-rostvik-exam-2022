@@ -23,9 +23,12 @@ async function fetchBlogList() {
 
         blogPostImage.src = `${data._embedded['wp:featuredmedia']['0'].source_url}`;
 
+        blogPostImage.alt = `${data._embedded['wp:featuredmedia']['0'].alt_text}`;
+
         blogPost.innerHTML += `${data.content.rendered}`;    
     }
     catch(error) {
+        console.log(error)
         errorMessage.innerHTML = `<p>An error has occurred!</p>`;
     }
 }

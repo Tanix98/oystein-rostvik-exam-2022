@@ -5,10 +5,19 @@ const modalBackground = document.querySelector(".modal-background");
 const modalX = document.querySelector(".modal-x");
 
 async function openModal() {
-    imageModal.style.display = "flex";
-    const response = await fetch(postUrl);
-    const data = await response.json();
-    imageModalImg.src = `${data._embedded['wp:featuredmedia']['0'].source_url}`;
+    try {
+        const response = await fetch(postUrl);
+        const data = await response.json();
+
+        imageModal.style.display = "flex";
+
+        imageModalImg.src = `${data._embedded['wp:featuredmedia']['0'].source_url}`;
+
+        imageModalImg.alt = `${data._embedded['wp:featuredmedia']['0'].alt_text}`;
+    } catch (error) {
+        console.log(error)
+        errorMessage.innerHTML = `<p>An error has occurred!</p>`;
+    }
 }
 
 blogpostImage.onclick = function() {

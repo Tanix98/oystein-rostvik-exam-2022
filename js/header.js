@@ -14,6 +14,7 @@ hamburgerButton.addEventListener("click", function(){
             blogNav.style.display = "none"
         } 
     } catch (error) {
+        console.log(error)
         errorMessage.innerHTML = `<p>An error has occurred!</p>`;
     }
 });

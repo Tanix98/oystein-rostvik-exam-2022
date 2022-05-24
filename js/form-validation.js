@@ -45,6 +45,7 @@ function formValidation() {
         pageErrorMessage.innerHTML = "";
     }
     catch(error) {
+        console.log(error)
         errorMessage.innerHTML = `<p>An error has occurred!</p>`;
     }
 }
@@ -61,6 +62,7 @@ function checkLength(value, len) {
         }
     }
     catch(error) {
+        console.log(error)
         errorMessage.innerHTML = `<p>An error has occurred!</p>`;
     }
 }
@@ -72,6 +74,7 @@ function validateEmail(email) {
         return patternMatches;
     }
     catch(error) {
+        console.log(error)
         errorMessage.innerHTML = `<p>An error has occurred!</p>`;
     }
 }

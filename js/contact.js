@@ -14,6 +14,7 @@ async function fetchPageHtml() {
         pageContainer.innerHTML = `${data.content.rendered}`;
     }
     catch(error) {
+        console.log(error)
         errorMessage.innerHTML = `<p>An error has occurred!</p>`;
     }   
 }

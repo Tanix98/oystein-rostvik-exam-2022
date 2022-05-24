@@ -19,6 +19,7 @@ async function fetchRecentBlogPosts1() {
         }
     }
     catch(error) {
+        console.log(error)
         errorMessage.innerHTML = `<p>An error has occurred!</p>`;
     }
 }
@@ -36,6 +37,7 @@ async function fetchRecentBlogPosts2() {
         }
     }
     catch(error) {
+        console.log(error)
         errorMessage.innerHTML = `<p>An error has occurred!</p>`;
     }
 }
