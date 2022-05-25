@@ -15,7 +15,7 @@ async function fetchRecentBlogPosts1() {
         errorMessage.innerHTML = "";
 
         for(let i = 0; i < data.length; i++) {
-            carouselContainer1.innerHTML += `<div class="blog-post"><a href="pages/blogpage.html?id=${data[i].id}"><img src="${data[i].featured_media_src_url}" class="blog-post-thumbnail"> <h3 class="blog-title">${data[i].title.rendered}</h3> <p class="blog-date">${data[i].date}<p/></a></div>`;
+            carouselContainer1.innerHTML += `<div class="blog-post"><a href="pages/blogpage.html?id=${data[i].id}" aria-label="Blog post: ${data[i].title.rendered}"><img src="${data[i].featured_media_src_url}" class="blog-post-thumbnail"> <h3 class="blog-title">${data[i].title.rendered}</h3> <p class="blog-date">${data[i].date}<p/></a></div>`;
         }
     }
     catch(error) {
@@ -33,7 +33,7 @@ async function fetchRecentBlogPosts2() {
         errorMessage.innerHTML = "";
 
         for(let i = 0; i < data.length; i++) {
-            carouselContainer2.innerHTML += `<div class="blog-post"><a href="pages/blogpage.html?id=${data[i].id}"><img src="${data[i].featured_media_src_url}" class="blog-post-thumbnail"> <h3 class="blog-title">${data[i].title.rendered}</h3> <p class="blog-date">${data[i].date}<p/></a></div>`;
+            carouselContainer2.innerHTML += `<div class="blog-post"><a href="pages/blogpage.html?id=${data[i].id}" aria-label="Blog post: ${data[i].title.rendered}"><img src="${data[i].featured_media_src_url}" class="blog-post-thumbnail"> <h3 class="blog-title">${data[i].title.rendered}</h3> <p class="blog-date">${data[i].date}<p/></a></div>`;
         }
     }
     catch(error) {

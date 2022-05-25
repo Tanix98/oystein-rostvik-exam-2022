@@ -1,6 +1,8 @@
-const apiPostsList = "https://www.tanix.one/wp-json/wp/v2/posts?page=2";
-
 const apiPageUrl = "https://www.tanix.one/wp-json/wp/v2/pages/106";
+
+const apiPostsList = "https://www.tanix.one/wp-json/wp/v2/posts?_fields=id,title,_links,_embedded&_embed&page=2";
+
+const blogPostThumbnail = document.querySelector(".blog-post-thumbnail");
 
 const titleContainer = document.querySelector(".page-title");
 
@@ -16,7 +18,7 @@ async function fetchPageTitle() {
         errorMessage.innerHTML = "";
 
         titleContainer.innerHTML = `<h1>${data.title.rendered}</h1>`;
-    }
+        }
     catch(error) {
         console.log(error)
         errorMessage.innerHTML = `<p>An error has occurred!</p>`;
@@ -26,13 +28,12 @@ async function fetchPageTitle() {
 async function fetchBlogList() {
     try{
         const response = await fetch(apiPostsList);
-
         const data = await response.json();
 
         errorMessage.innerHTML = "";
 
         for(let i = 0; i < data.length; i++) {
-            blogList.innerHTML += `<div class="blog-post"><a href="blogpage.html?id=${data[i].id}" aria-label="Blog post: ${data[i].title.rendered}"><img src="${data[i].featured_media_src_url}" class="blog-post-thumbnail"> <h2 class="blog-title">${data[i].title.rendered}</h2> <p class="blog-date">${data[i].date}<p/></a></div>`;
+            blogList.innerHTML += `<div class="blog-post"><a href="blogpage.html?id=${data[i].id}" aria-label="Blog post: ${data[i].title.rendered}"><img src="${data[i]._embedded['wp:featuredmedia']['0'].media_details.sizes.medium_large.source_url}" class="blog-post-thumbnail" alt="${data[i]._embedded['wp:featuredmedia']['0'].alt_text}"> <h2 class="blog-title">${data[i].title.rendered}</h2> <p class="blog-date">${data[i]._embedded['wp:featuredmedia']['0'].date}<p/></a></div>`;
         }
     }
     catch(error) {
@@ -41,6 +42,6 @@ async function fetchBlogList() {
     }
 }
 
-fetchPageTitle()
+fetchPageTitle();
 
 fetchBlogList();
