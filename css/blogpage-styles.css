@@ -1,7 +1,6 @@
 main {
     display: flex;
     flex-direction: column;
-    padding: 10px;
 }
 
 .blog {
@@ -50,12 +49,25 @@ p {
 
 @media only screen and (max-width: 625px) {
     .blogpost-image {
-        height: 345px;
+        height: 300px;
     }
 }
 
 @media only screen and (max-width: 470px) {
-    .blogpost-image img {
+    .blogpost-image {
         height: 250px;
+    }
+}
+
+@media only screen and (max-width: 311px) {
+    .blogpost-image {
+        height: 80vw;
+    }
+    
+}
+
+@media only screen and (max-width: 175px) {
+    h1 {
+        font-size: 30px !important;
     }
 }
