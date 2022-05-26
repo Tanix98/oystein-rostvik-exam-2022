@@ -52,9 +52,3 @@ p, .wp-block-post-date, .blog-post, .page-nav-main, .page-1-mobile, .page-2-mobi
     max-width: 800px;
     padding: 10px !important;
 }
-
-.error-message {
-    color: var(--red);
-    font-size: 20px;
-    text-align: center;
-}
