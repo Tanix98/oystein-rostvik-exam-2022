@@ -15,6 +15,5 @@ hamburgerButton.addEventListener("click", function(){
         } 
     } catch (error) {
         console.log(error)
-        errorMessage.innerHTML = `<p>An error has occurred!</p>`;
     }
 });

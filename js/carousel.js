@@ -12,15 +12,12 @@ async function fetchRecentBlogPosts1() {
 
         const data = await response.json();
 
-        errorMessage.innerHTML = "";
-
         for(let i = 0; i < data.length; i++) {
             carouselContainer1.innerHTML += `<div class="blog-post"><a href="pages/blogpage.html?id=${data[i].id}" aria-label="Blog post: ${data[i].title.rendered}"><img src="${data[i]._embedded['wp:featuredmedia']['0'].media_details.sizes.medium_large.source_url}" class="blog-post-thumbnail" alt="${data[i]._embedded['wp:featuredmedia']['0'].alt_text}"> <h3 class="blog-title">${data[i].title.rendered}</h3> <p class="blog-date">${data[i]._embedded['wp:featuredmedia']['0'].date}<p/></a></div>`;
         }
     }
     catch(error) {
         console.log(error)
-        errorMessage.innerHTML = `<p>An error has occurred!</p>`;
     }
 }
 
@@ -30,15 +27,12 @@ async function fetchRecentBlogPosts2() {
 
         const data = await response.json();
 
-        errorMessage.innerHTML = "";
-
         for(let i = 0; i < data.length; i++) {
             carouselContainer2.innerHTML += `<div class="blog-post"><a href="pages/blogpage.html?id=${data[i].id}" aria-label="Blog post: ${data[i].title.rendered}"><img src="${data[i]._embedded['wp:featuredmedia']['0'].media_details.sizes.medium_large.source_url}" class="blog-post-thumbnail" alt="${data[i]._embedded['wp:featuredmedia']['0'].alt_text}"> <h3 class="blog-title">${data[i].title.rendered}</h3> <p class="blog-date">${data[i]._embedded['wp:featuredmedia']['0'].date}<p/></a></div>`;
         }
     }
     catch(error) {
         console.log(error)
-        errorMessage.innerHTML = `<p>An error has occurred!</p>`;
     }
 }
 

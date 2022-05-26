@@ -16,7 +16,6 @@ async function openModal() {
         imageModalImg.alt = `${data._embedded['wp:featuredmedia']['0'].alt_text}`;
     } catch (error) {
         console.log(error)
-        errorMessage.innerHTML = `<p>An error has occurred!</p>`;
     }
 }
 

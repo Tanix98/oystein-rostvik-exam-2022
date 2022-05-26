@@ -6,8 +6,6 @@ const id = params.get("id");
 
 const postUrl = "https://www.tanix.one/wp-json/wp/v2/posts/" + id + "?_embed";
 
-const errorMessage = document.querySelector(".error-message");
-
 const blogPost = document.querySelector(".blog");
 
 const blogPostImage = document.querySelector(".blogpost-image");
@@ -17,10 +15,6 @@ async function fetchBlogList() {
         const response = await fetch(postUrl);
         const data = await response.json();
 
-        errorMessage.innerHTML = "";
-
-        console.log(data);
-
         blogPostImage.src = `${data._embedded['wp:featuredmedia']['0'].source_url}`;
 
         blogPostImage.alt = `${data._embedded['wp:featuredmedia']['0'].alt_text}`;
@@ -29,7 +23,6 @@ async function fetchBlogList() {
     }
     catch(error) {
         console.log(error)
-        errorMessage.innerHTML = `<p>An error has occurred!</p>`;
     }
 }
 

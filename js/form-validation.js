@@ -12,8 +12,6 @@ const subjectFormError = document.querySelector("#subject-error")
 const messageForm = document.querySelector("#message")
 const messageFormError = document.querySelector("#message-error")
 
-const pageErrorMessage = document.querySelector(".error-message");
-
 function formValidation() {
     try{
         event.preventDefault();
@@ -41,12 +39,9 @@ function formValidation() {
         } else {
             messageFormError.style.display = "block";
         }
-
-        pageErrorMessage.innerHTML = "";
     }
     catch(error) {
         console.log(error)
-        errorMessage.innerHTML = `<p>An error has occurred!</p>`;
     }
 }
 
@@ -63,7 +58,6 @@ function checkLength(value, len) {
     }
     catch(error) {
         console.log(error)
-        errorMessage.innerHTML = `<p>An error has occurred!</p>`;
     }
 }
 
@@ -75,6 +69,5 @@ function validateEmail(email) {
     }
     catch(error) {
         console.log(error)
-        errorMessage.innerHTML = `<p>An error has occurred!</p>`;
     }
 }
