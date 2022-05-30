@@ -10,6 +10,8 @@ const blogPost = document.querySelector(".blog");
 
 const blogPostImage = document.querySelector(".blogpost-image");
 
+const blogMetaDesc = document.querySelector('meta[name="description"]');
+
 async function fetchBlogList() {
     try{
         const response = await fetch(postUrl);
@@ -19,7 +21,9 @@ async function fetchBlogList() {
 
         blogPostImage.alt = `${data._embedded['wp:featuredmedia']['0'].alt_text}`;
 
-        blogPost.innerHTML += `${data.content.rendered}`;    
+        blogPost.innerHTML += `${data.content.rendered}`;
+
+        blogMetaDesc.innerHTML += `${data.slug}`;
     }
     catch(error) {
         console.log(error)
