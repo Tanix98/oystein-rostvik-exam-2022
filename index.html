@@ -1,112 +1,71 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Community Science Museum front page</title>
-    <meta name="description" content="Come join us at the Community Science Museum where we`re committed to making science accessible to all!">
-    <meta property="og:title" content="Community Science Museum front page">
-    <meta property="og:type" content="website">
-    <meta property="og:description" content="Come join us at the Community Science Museum where we`re committed to making science accessible to all!">
-    <meta property="og:url" content="https://silly-haibt-b7ef5b.netlify.app">
-    <meta property="og:image" content="https://silly-haibt-b7ef5b.netlify.app/resources/images/scott-webb-102825.jpg">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#ffffff">
-    <meta charset="utf-8">
-    <link href="css/styles.css" rel="stylesheet">
-    <link href="css/front-page-styles.css" rel="stylesheet">
+    <meta name="description" content="Nature & Food Blog - Homepage">
+    <meta name="color-scheme" content="light only">
+    <title>Home</title>
+    <link rel="icon" href="resources/logo/favicon.svg">
+    <link rel="stylesheet" href="css/home-styles.css">
+    <link rel="stylesheet" href="css/blog-post-card-styles.css">
+    <link rel="stylesheet" href="css/header-styles.css">
+    <link rel="stylesheet" href="css/footer-styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jost:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <nav>
-            <label for="header-hamburger-menu-button"><img src="resources/icons-logos/hamburger-menu-icon-black.png" alt="hamburger menu button"></label>
-            <input type="checkbox" id="header-hamburger-menu-button">
-            <div class="header-museum-logo"><a href="index.html"><img src="resources/icons-logos/museum-logo.png" alt="Community Science Museum logo"></a></div>
-            <ul>
-                <li>
-                   <div class="header-museum-categories">
-                        <a href="pages/explore.html" class="header-explore-button">Explore</a>
-                        <a href="pages/exhibition-spaces.html" class="header-exhibitionspaces-button">Exhibition spaces</a>
-                        <a href="pages/special-events-and-exhibitions.html" class="header-specialevents-button">Special events and exhibitions</a>
-                        <a href="pages/get-involved.html" class="header-getinvolved-button">Get involved</a>
-                        <a href="pages/visit.html" class="header-visit-button">Visit</a>
-                    </div> 
-                </li>
+            <input type="image" src="resources/icons/hamburger-menu-button.svg" class="hamburger-button" alt="hamburger menu button">
+            <div class="blog-logo"><a href="index.html"><img src="resources/logo/blog-logo.svg" alt="Nature & Food Blog logo"></a></div>
+            <ul class="header-ul">
+                <li class="header-li">
+                    <a href="index.html" id="nav-home">Home</a>
+                    <a href="pages/blogs-page-1.html" id="nav-blogs">Blogs</a>
+                    <a href="pages/about.html" id="nav-about">About</a>
+                    <a href="pages/contact.html" id="nav-contact">Contact</a>
+                </li>    
             </ul>
-            <div id="hamburger-menu">
-                <div class="hamburger-menu-museum-logo"><a href="index.html"><img src="resources/icons-logos/museum-logo.png" alt="Community Science Museum logo"></a></div>
-                <ul>
-                    <li>
-                        <div class="hamburger-menu-museum-categories">
-                        <a href="pages/explore.html" class="hamburger-menu-explore-button">Explore</a>
-                        <a href="pages/exhibition-spaces.html" class="hamburger-menu-exhibitionspaces-button">Exhibition spaces</a>
-                        <a href="pages/special-events-and-exhibitions.html" class="hamburger-menu-specialevents-button">Special events and exhibitions</a>
-                        <a href="pages/get-involved.html" class="hamburger-menu-getinvolved-button">Get involved</a>
-                        <a href="pages/visit.html" class="hamburger-menu-visit-button">Visit</a>
-                        </div>
-                    </li>
-                </ul>
-                <div class="hamburger-menu-social-medias">
-                    <div class="hamburger-menu-facebook-icon"><a href="https://www.facebook.com/CommunityScienceMuseum"><img src="resources/icons-logos/social-media/facebook-logo-black.png" alt="Facebook link"></a></div>
-                    <div class="hamburger-menu-instagram-icon"><a href="https://www.instagram.com/communitysciencemuseum/"><img src="resources/icons-logos/social-media/instagram-glyph-black.png" alt="Instagram link"></a></div>
-                    <div class="hamburger-menu-twitter-icon"><a href="https://twitter.com/CommunityScienceMuseum"><img src="resources/icons-logos/social-media/twitter-logo-black.png" alt="Twitter link"></a></div>
-                    <div class="hamburger-menu-youtube-icon"><a href="https://www.youtube.com/user/communitysciencemuseum"><img src="resources/icons-logos/social-media/yt_logo_mono_light.png" alt="Youtube link"></a></div>
-                </div>
-                <div class="hamburger-menu-copyright">© 2021 COMMUNITY SCIENCE MUSEUM</div>
-                <div class="hamburger-menu-email">
-                    <div class="hamburger-menu-email-icon"><a href="mailto:post@csmuseum.no"><img src="resources/icons-logos/email-icon-black.png" alt="email logo"></a></div>
-                    <div class="hamburger-menu-email-address"><a href="mailto:post@csmuseum.no">post@csmuseum.no</a></div>
-                </div>
-            </div>
         </nav>
+        <div class="mobile-nav">
+            <ul class="mobile-header-ul">
+                <li class="mobile-header-li">
+                    <a href="index.html" id="mobile-nav-home">Home</a>
+                    <a href="pages/blogs-page-1.html" id="mobile-nav-blogs">Blogs</a>
+                    <a href="pages/about.html" id="mobile-nav-about">About</a>
+                    <a href="pages/contact.html" id="mobile-nav-contact">Contact</a>
+                </li>    
+            </ul>
+            <p class="copyright-mobile">© Copyright 2022 Øystein Røstvik</p>
+        </div>
     </header>
     <main>
-        <div class="header-space">header space</div>
-        <h1 class="page-title">COMMUNITY SCIENCE MUSEUM</h1>
-        <div class="welcome-text">
-            <div class="undertitle">"Explore together"</div>
-            <div class="main-text">
-                <p>Come join us at the Community Science Museum where we`re committed to making science accessible to all!</p>
-                <p>Over the course of human history, science has developed from our early understanding of fire, wind, water, and earth to exploring everything from galaxies far away to the very building blocks of life itself.</p>
-                <p>The aim of our museum is to create a space where everyone can experience the wonders of our discoveries and perhaps even ignite a lifelong passion to continue the exploration of the world around us.</p>
-                <div class="p-bottom">We believe science should not be confined to the textbook, but brought to live through exhibits. This is why we have over 1000 different exhibits on the many varied subjects of science to explore. Many of these exhibits are designed for you to interact with and play around to see science come to life (apart from the dinosaur exhibits - they only come to life at night when everyone`s gone home).</div>
+        <div class="page-content"></div>
+        <div class="carousel">
+            <h2 id="carousel-title">Latest posts</h2>
+            <div class="carousel-main">
+                <button id="previous-slide-arrow" class="slide-arrows"><img src="resources/icons/black-left-arrow-carousel.svg" alt="Previous slide button"></button>
+                <div class="slides">
+                    <div id="slide-1"></div>
+                    <div id="slide-2" class="invisible-slide"></div>
+                </div>
+                <button id="next-slide-arrow" class="slide-arrows"><img src="resources/icons/black-right-arrow-carousel.svg" alt="Next slide button"></button>
             </div>
-        </div>
-        <div class="categories">
-            <div class="explore">
-                <div class="explore-image"><a href="pages/explore.html"><img src="resources/images/billetto-editorial-334686.jpg" alt="Explore page shortcut"></a></div>
-                <div class="explore-image-text">EXPLORE</div>
+            <div class="carousel-dots">
+                <button id="slide-1-button" aria-label="Recent blog posts previous slide" class="active" ></button>
+                <button id="slide-2-button" aria-label="Recent blog posts next slide"></button>
             </div>
-            <div class="exhibition-spaces">
-                <div class="exhibition-spaces-image"><a href="pages/exhibition-spaces.html"><img src="resources/images/exhibition-1863344_1920.jpg" alt="Exhibition Spaces page shortcut"></a></div>
-                <div class="exhibition-spaces-image-text">EXHIBITION SPACES</div>
-            </div>
-            <div class="special-events-and-exhibitions">
-                <div class="special-events-and-exhibitions-image"><a href="pages/special-events-and-exhibitions.html"><img src="resources/images/william-bout-264826.jpg" alt="Special Events and Exhibitions page shortcut"></a></div>
-                <div class="special-events-and-exhibitions-image-text">SPECIAL EVENTS AND EXHIBITIONS</div>
-            </div>
-            <div class="get-involved">
-                <div class="get-involved-image"><a href="pages/get-involved.html"><img src="resources/images/adobestock_247185860.jpg" alt="Get Involved page shortcut"></a></div>
-                <div class="get-involved-image-text">GET INVOLVED</div>
-            </div>
-            <div class="visit">
-                <div class="visit-image"><a href="pages/visit.html"><img src="resources/images/library-1132573_1920.jpg" alt="Visit page shortcut"></a></div>
-                <div class="visit-image-text">VISIT</div>
-            </div>
-        </div>
+        </div>   
     </main>
     <footer>
-        <div class="footer-container">
-            <div class="footer-copyright">© 2021 COMMUNITY SCIENCE MUSEUM</div>
-            <div class="footer-email">
-                <div class="footer-email-icon"><a href="mailto:post@csmuseum.no"><img src="resources/icons-logos/email-icon-white.png" alt="email logo"></a></div>
-                <div class="footer-email-address"><a href="mailto:post@csmuseum.no">post@csmuseum.no</a></div>
-            </div>
-            <div class="footer-social-medias">
-                <div class="footer-facebook-icon"><a href="https://www.facebook.com/CommunityScienceMuseum"><img src="resources/icons-logos/social-media/facebook-logo-white.png" alt="Facebook link"></a></div>
-                <div class="footer-instagram-icon"><a href="https://www.instagram.com/communitysciencemuseum/"><img src="resources/icons-logos/social-media/instagram-glyph-white.png" alt="Instagram link"></a></div>
-                <div class="footer-twitter-icon"><a href="https://twitter.com/CommunityScienceMuseum"><img src="resources/icons-logos/social-media/twitter-logo-white.png" alt="Twitter link"></a></div>
-                <div class="footer-youtube-icon"><a href="https://www.youtube.com/user/communitysciencemuseum"><img src="resources/icons-logos/social-media/yt_logo_mono_dark.png" alt="Youtube link"></a></div>
-            </div>
-        </div>
+        <div class="copyright">© Copyright 2022 Øystein Røstvik</div>    
     </footer>
+    <script src="js/header.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>
