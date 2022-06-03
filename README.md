@@ -29,7 +29,7 @@ Created for the exam for first year Front-end Development at Noroff. It's a blog
 
 ## Contact
 
-[Click to view my contact info]()
+[Click to view my contact info](https://oystein-rostvik-portfolio.netlify.app/pages/socials.html)
 
 ## Acknowledgments
 
